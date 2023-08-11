@@ -8,9 +8,9 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <Formulario></Formulario>
-      <ListadoPacientes></ListadoPacientes>
+      <Header />
+      <Formulario />
+      <ListadoPacientes /> 
     </>
   )
 }
