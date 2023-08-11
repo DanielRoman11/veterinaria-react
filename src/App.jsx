@@ -1,9 +1,13 @@
+import Header from "./components/Header";
 function App() {
+  
+  const edad = 18;
+
   return (
-    <div className='App'>
-      <h1>Hola mundo</h1>
-    </div>
-  )  
+    <>
+      <Header></Header>  
+    </>
+  )
 }
 
 export default App
