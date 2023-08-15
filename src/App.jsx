@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="container mx-auto mt-20 ">
         <Header />
-        <div className="sm:flex gap-4 mt-12 justify-center">
+        <div className="sm:flex justify-center gap-2 mt-12">
           <Formulario />
           <ListadoPacientes /> 
 
