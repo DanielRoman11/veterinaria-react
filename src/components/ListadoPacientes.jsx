@@ -1,7 +1,10 @@
 export default function ListadoPacientes() {
   return (
-    <div className="sm:w-1/2 lg:w-1/3">
-      <h2>Listado Pacientes</h2>
+    <div className=" grow">
+      <section className="border-2  border-dashed">
+        <h2 className="mx-auto text-center text-2xl font-bold">Listado de Pacientes</h2>
+
+      </section>
 
     </div>
   )
