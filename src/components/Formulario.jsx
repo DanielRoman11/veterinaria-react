@@ -1,7 +1,7 @@
 export default function Formulario () {
   return (
     <div className="sm:w-1/2 lg:w-1/3">
-      <form action="" className="w-full bg-white dark:bg-gray-200 shadow-md rounded-md mb-10 px-4 py-5">
+      <form action="" className="w-full bg-white dark:bg-slate-200 shadow-md rounded-md mb-10 px-4 py-5">
         <fieldset className="flex flex-col justify-center space-y-5">
           <legend className="font-bold text-slate-700">Información <span className="text-indigo-600"> Mascota🐶</span></legend>
           <label htmlFor="mascota">
