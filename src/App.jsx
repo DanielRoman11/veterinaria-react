@@ -5,7 +5,7 @@ import ListadoPacientes from "./components/ListadoPacientes";
 function App() {
   return (
     <>
-      <div className="container mx-auto mt-20 ">
+      <div className="min-[300px]:px-2 container mx-auto mt-20 ">
         <Header />
         <div className="sm:flex justify-center gap-2 mt-12">
           <Formulario />
