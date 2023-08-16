@@ -58,7 +58,7 @@ export default function Formulario () {
               className="mt-1  w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm text-gray-700 shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"/>
           </label>
           <button type="submit">
-            <span className="before:block before:absolute mt-1 before:-inset-1 before:-skew-y-3 decoration-[#FFFB26] before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy relative inline-block">
+            <span className="before:block before:absolute mt-1 before:-inset-1 before:skew-y-1 decoration-white before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy relative inline-block">
               <span className="relative italic text-white font-semibold text-lg "> Agregar Paciente</span>
             </span> 
           </button>
