@@ -1,13 +1,13 @@
 export default function Formulario () {
   return (
     <div className="sm:w-1/2 lg:w-1/3">
-      <form action="" className="w-full bg-white dark:bg-slate-200 shadow-md rounded-md mb-10 px-4 py-5">
+      <form action="" className="w-full bg-white dark:bg-slate-800 shadow-md rounded-md mb-10 px-4 py-5 min-h-[670px]">
         <fieldset className="flex flex-col justify-center space-y-5">
-          <legend className="font-bold text-slate-700">Información 
+          <legend className="font-bold text-slate-700 dark:text-slate-200">Información 
             <span className="text-indigo-600"> Mascota🐶</span>
           </legend>
           <label htmlFor="mascota">
-            <span className="block text-sm font-medium text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500">Nombre Mascota</span>
+            <span className="block text-sm font-medium text-slate-700 dark:text-slate-200 after:content-['*'] after:ml-0.5 after:text-red-500">Nombre Mascota</span>
             <input 
               type="text" 
               name="mascota" 
@@ -17,7 +17,7 @@ export default function Formulario () {
               className="peer mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm text-gray-700 shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"/>
           </label>
           <label htmlFor="propietario">
-            <span className=" text-sm font-medium text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500">Nombre Propietario</span>
+            <span className=" text-sm font-medium text-slate-700 dark:text-slate-200 after:content-['*'] after:ml-0.5 after:text-red-500">Nombre Propietario</span>
             <input 
               type="text" 
               name="propietario" 
@@ -27,7 +27,7 @@ export default function Formulario () {
               className="peer mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm text-gray-700 shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"/>
           </label>
           <label htmlFor="email" className="relative">
-            <span className="text-sm font-medium text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500">Email</span>
+            <span className="text-sm font-medium text-slate-700 dark:text-slate-200 after:content-['*'] after:ml-0.5 after:text-red-500">Email</span>
             <input 
               type="email" 
               name="email" 
@@ -39,7 +39,7 @@ export default function Formulario () {
               </p>
           </label>
           <label className="relative" htmlFor="date">
-            <span className="text-sm font-medium text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500">Fecha de Alta</span>
+            <span className="text-sm font-medium text-slate-700 dark:text-slate-200 after:content-['*'] after:ml-0.5 after:text-red-500">Fecha de Alta</span>
             <input 
               type="date" 
               name="date" 
@@ -50,7 +50,7 @@ export default function Formulario () {
               </p>
           </label>
           <label htmlFor="sintomas">
-            <span className="text-sm font-medium text-slate-700 after:content-['*'] after:ml-0.5 after:text-red-500">Síntomas</span>
+            <span className="text-sm font-medium text-slate-700 dark:text-slate-200 after:content-['*'] after:ml-0.5 after:text-red-500">Síntomas</span>
             <textarea 
               name="sintomas"
               id="sintomas"
