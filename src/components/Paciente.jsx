@@ -1,6 +1,6 @@
 export default function Paciente() {
  return (
-  <article className="py-4 px-2 rounded-xl bg-neutral-200 dark:bg-gray-900">
+  <article className="py-4 px-2 rounded-xl bg-neutral-200 dark:bg-[#0e0f0f48] border-2 border-dashed">
     <p className="font-semibold text-indigo-600">Nombre: {""} 
       <span className="font-normal text-stone-700 dark:text-white">Jake</span>
     </p>
