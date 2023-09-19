@@ -1,24 +1,27 @@
-export default function Paciente() {
+export default function Paciente({paciente}) {
+
+  const { nombre, propietario, email, fecha, sintomas } = paciente;
+
  return (
   <article className="py-4 px-2 rounded-xl bg-neutral-200 dark:bg-[#0e0f0f48] border-2 border-dashed">
     <p className="font-semibold text-indigo-600">Nombre: {""} 
-      <span className="font-normal text-stone-700 dark:text-white">Jake</span>
+      <span className="font-normal text-stone-700 dark:text-white">{nombre}</span>
     </p>
 
     <p className="font-semibold text-indigo-600">Propietario: {""} 
-      <span className="font-normal text-stone-700 dark:text-white">Finn el humano</span>
+      <span className="font-normal text-stone-700 dark:text-white">{propietario}</span>
     </p>
 
     <p className="font-semibold text-indigo-600">Email: {""} 
-      <span className="font-normal text-stone-700 dark:text-white">finn@correo.com</span>
+      <span className="font-normal text-stone-700 dark:text-white">{email}</span>
     </p>
 
     <p className="font-semibold text-indigo-600">Fecha  {""}de alta: 
-      <span className="font-normal text-stone-700 dark:text-white">10 Diciembre de 2022</span>
+      <span className="font-normal text-stone-700 dark:text-white">{fecha}</span>
     </p>
 
     <p className="font-semibold text-indigo-600">Síntomas: {""} 
-      <span className="font-normal text-stone-700 dark:text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A maxime deserunt adipisci nisi commodi quaerat maiores quasi rerum harum nulla praesentium voluptate tempora, quibusdam, tenetur temporibus aliquid quam? Esse, ut?
+      <span className="font-normal text-stone-700 dark:text-white">{sintomas}
       </span>
     </p>
   </article>
