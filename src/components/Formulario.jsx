@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
+import Error from './Error';
 
-export default function Formulario () {
+export default function Formulario (props) {
+
+  const {pacientes, setPacientes} = props;
+
   const [nombre, setNombre] = useState('');
   const [propietario, setPropietario] = useState('');
   const [email, setEmail] = useState('');
@@ -17,11 +21,31 @@ export default function Formulario () {
       return setError(true)
     }
     setError(false)
-    console.log('Enviando form...');
+    
+    //* Objeto Paciente
+    const newPaciente = {
+      nombre, 
+      propietario, 
+      email, 
+      fecha, 
+      sintomas
+    }
+
+    setPacientes([
+      ...pacientes, 
+      newPaciente
+    ]);
+
+    //! Reiniciar el formulario
+    setNombre('')
+    setPropietario('')
+    setEmail('')
+    setFecha('')
+    setSintomas('')
   }
   
   return (
-    <div className="sm:w-1/2 lg:w-1/3 sm:h-[680px]">
+    <div className="sm:w-1/2 lg:w-1/3 sm:h-[730px] relative">
       <form
         action="" 
         noValidate 
@@ -29,13 +53,12 @@ export default function Formulario () {
         onSubmit={handleSubmit}>
         <fieldset className="flex flex-col justify-center space-y-5">
           {error && 
-          <p
-            className='text-white text-sm text-center font-semibold mx-auto mt-3 bg-red-700 w-full py-3 rounded-md'>
-              Todos los campos son obligatorios 🙅‍♂️
-          </p>
+            <Error>
+              Todos los campos son
+            </Error>
           }
           <legend className="font-bold text-slate-700 dark:text-slate-200">Información de la
-            <span className="text-[#FFFB26]"> Mascota🐶</span>
+            <span className="text-[#426AFC] dark:text-[#FFFB26]"> Mascota🐶</span>
           </legend>
           <label htmlFor="mascota">
             <span className="block text-sm font-medium text-slate-700 dark:text-slate-200 after:content-['*'] after:ml-0.5 after:text-red-500">Nombre Mascota</span>
@@ -101,7 +124,9 @@ export default function Formulario () {
               value={sintomas}
               onChange={(e) => setSintomas(e.target.value)}/>
           </label>
-          <button type="submit">
+          <button 
+            type="submit"
+            className='absolute inset-x-0 bottom-5'>
             <span className="before:block before:absolute mt-1 before:-inset-1 before:skew-y-1 decoration-white before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy relative inline-block">
               <span className="relative italic text-white font-semibold text-lg "> Agregar Paciente</span>
             </span> 
