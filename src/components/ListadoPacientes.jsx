@@ -2,8 +2,6 @@ import Paciente from "./Paciente";
 
 export default function ListadoPacientes({pacientes}) {
 
-
-
   return (
     <div className="sm:w-1/2 lg:w-1/3 sm:h-[730px] overflow-y-auto border-2 border-dashed dark:border-slate-700 rounded-md">
       <section className=" text-slate-700  dark:text-slate-300 px-2 py-5">
@@ -15,8 +13,9 @@ export default function ListadoPacientes({pacientes}) {
         </legend>
         <article className="space-y-2 py-2">
 
-          {pacientes.map(paciente => (
-            <Paciente 
+          {pacientes.map((paciente) => (
+            <Paciente
+              key={paciente.id}
               paciente={paciente}
             />
           ))}

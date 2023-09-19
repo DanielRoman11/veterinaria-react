@@ -13,6 +13,13 @@ export default function Formulario (props) {
 
   const [error, setError] = useState(false);
 
+  const generarId = () =>{
+    const r = Math.random().toString(36).substring(8);
+    const t = Date.now().toString(16).substring(4);
+
+    return (r + t).toUpperCase();
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -28,7 +35,8 @@ export default function Formulario (props) {
       propietario, 
       email, 
       fecha, 
-      sintomas
+      sintomas,
+      id: generarId()
     }
 
     setPacientes([
