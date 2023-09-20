@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react';
 import Error from './Error';
 
 export default function Formulario (props) {
+  const { pacientes, setPacientes } = props;
 
-  const {pacientes, setPacientes} = props;
-
-  const [nombre, setNombre] = useState('');
-  const [propietario, setPropietario] = useState('');
-  const [email, setEmail] = useState('');
-  const [fecha, setFecha] = useState('');
-  const [sintomas, setSintomas] = useState('');
+  const [ nombre, setNombre ] = useState('');
+  const [ propietario, setPropietario ] = useState('');
+  const [ email, setEmail ] = useState('');
+  const [ fecha, setFecha ] = useState('');
+  const [ sintomas, setSintomas ] = useState('');
 
   const [error, setError] = useState(false);
 
@@ -25,9 +24,10 @@ export default function Formulario (props) {
 
     //? Valdición formulario
     if([ nombre, propietario, email, fecha, sintomas ].includes('')){
-      return setError(true)
+      return setError(true);
     }
-    setError(false)
+
+    setError(false);
     
     //* Objeto Paciente
     const newPaciente = {
@@ -51,7 +51,7 @@ export default function Formulario (props) {
     setFecha('')
     setSintomas('')
   }
-  
+
   return (
     <div className="sm:w-1/2 lg:w-1/3 sm:h-[730px] relative">
       <form
@@ -65,7 +65,8 @@ export default function Formulario (props) {
               Todos los campos son
             </Error>
           }
-          <legend className="font-bold text-slate-700 dark:text-slate-200">Información de la
+          <legend className="font-bold text-slate-700 dark:text-slate-200">
+              Información de la
             <span className="text-[#426AFC] dark:text-[#FFFB26]"> Mascota🐶</span>
           </legend>
           <label htmlFor="mascota">
