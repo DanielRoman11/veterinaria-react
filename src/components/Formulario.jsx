@@ -60,10 +60,11 @@ export default function Formulario (props) {
         className="w-full bg-white dark:bg-slate-800 shadow-md rounded-md mb-10 px-4 py-5 min-h-[670px] h-full"
         onSubmit={handleSubmit}>
         <fieldset className="flex flex-col justify-center space-y-5">
-          {error && 
-            <Error>
-              Todos los campos son
-            </Error>
+          {
+            error &&
+              <Error>
+                Todos los campos son
+              </Error>
           }
           <legend className="font-bold text-slate-700 dark:text-slate-200">
               Información de la
