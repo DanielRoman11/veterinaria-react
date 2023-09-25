@@ -16,7 +16,7 @@ export default function Paciente({paciente}) {
       <span className="font-normal text-stone-700 dark:text-white">{email}</span>
     </p>
 
-    <p className="font-semibold text-indigo-600 dark:text-yellow-200">Fecha  {""}de alta: 
+    <p className="font-semibold text-indigo-600 dark:text-yellow-200">Fecha de alta: {""} 
       <span className="font-normal text-stone-700 dark:text-white">{fecha}</span>
     </p>
 
@@ -25,16 +25,16 @@ export default function Paciente({paciente}) {
       </span>
     </p>
     
-    <div className="flex flex-col md:flex-row sm:items-end w-full sm:w-1/2 md:space-x-4 space-y-2 md:space-y-0 mt-10 ">
+    <div className="flex flex-col sm:flex-row sm:justify-evenly  w-full sm:space-x-4 space-y-2 sm:space-y-0 mt-10 ">
       <button 
         type="button"
-        className="font-bold border-2 border-dashed border-indigo-600 dark:border-[#FFFB26] text-indigo-600 dark:text-[#FFFB26] py-1 px-3 rounded-sm w-full" >
-          EDITAR
+        className="font-bold border-2 border-dashed border-indigo-600 dark:border-[#FFFB26] text-indigo-600 dark:text-[#FFFB26] py-1 px-3 rounded-sm w-full sm:w-36">
+          EDITAR ✍️
       </button>
       <button 
         type="button"
-        className="font-bold border-2 border-dashed border-red-700 text-red-700 py-1 px-3 rounded-sm w-full" >
-          ELIMINAR
+        className="font-bold border-2 border-dashed border-red-700 text-red-700 py-1 px-3 rounded-sm w-full sm:w-36" >
+          ELIMINAR 🗑️
       </button>
     </div>
   </article>
