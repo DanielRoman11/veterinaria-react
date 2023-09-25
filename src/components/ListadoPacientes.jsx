@@ -8,23 +8,28 @@ export default function ListadoPacientes({pacientes}) {
         {pacientes && pacientes.length ? (
           <>
             <h2 className="mx-auto text-center text-2xl font-bold">Listado de Pacientes</h2>
-            <legend className="font-bold border-b-2 border-dashed border-spacing-5 py-4 px-2">
+            <legend className="font-bold text-center py-4 px-2">
               <span className="underline text-[#426AFC] dark:text-[#FFFB26] decoration-[#426AFC] dark:decoration-[#FFFB26] underline-offset-4 decoration-wavy decoration-2"> Pacientes y Citas</span>
             </legend>
+            <article className="space-y-2 py-2">
+
+              {
+                pacientes.map((paciente) => (
+                  <Paciente
+                    key={paciente.id}
+                    paciente={paciente}
+                />)
+              )}
+            </article>
           </>
         ) : (
-          <h2 className="mx-auto text-center text-2xl font-bold">No hay Pacientes</h2>
+          <>
+            <h2 className="mx-auto text-center text-2xl font-bold">No hay Pacientes</h2>
+              <legend className="font-bold py-4 px-2 text-center"> Registra tus
+                <span className="underline text-[#426AFC] dark:text-[#FFFB26] decoration-[#426AFC] dark:decoration-[#FFFB26] underline-offset-4 decoration-wavy decoration-2"> Pacientes y Citas</span>
+              </legend>
+          </>
         )}
-        <article className="space-y-2 py-2">
-
-          {pacientes.map((paciente) => (
-            <Paciente
-              key={paciente.id}
-              paciente={paciente}
-            />
-          ))}
-
-        </article>
       </section>
     </div>
   )
