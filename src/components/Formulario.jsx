@@ -134,13 +134,13 @@ export default function Formulario (props) {
               value={sintomas}
               onChange={(e) => setSintomas(e.target.value)}/>
           </label>
-          <button 
-            type="submit"
-            className='absolute inset-x-0 bottom-5'>
-            <span className="before:block before:absolute mt-1 before:-inset-1 before:skew-y-1 decoration-white before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy relative inline-block">
-              <span className="relative italic text-white font-semibold text-lg "> Agregar Paciente</span>
-            </span> 
-          </button>
+            <button 
+              type="submit"
+              className='absolute bottom-5 inset-x-0'>
+              <span className="before:block before:absolute mt-1 before:-inset-1 before:skew-y-1 decoration-white before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy relative inline-block">
+                <span className="relative italic text-white font-semibold text-lg ">Agregar Paciente</span>
+              </span> 
+            </button>
         </fieldset>
       </form>
     </div>
