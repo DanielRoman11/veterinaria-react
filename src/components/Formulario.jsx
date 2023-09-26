@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Error from './Error';
 
 export default function Formulario (props) {
-  const { pacientes, setPacientes } = props;
+  const { pacientes, setPacientes, paciente } = props;
 
   const [ nombre, setNombre ] = useState('');
   const [ propietario, setPropietario ] = useState('');
@@ -39,10 +39,21 @@ export default function Formulario (props) {
       id: generarId()
     }
 
+    if(Object.keys(paciente).length !== 0){
+      pacientes.map( p => {
+        if(p.id === paciente.id){
+          const editPaciente = pacientes.splice(p.id, 1, newPaciente);
+
+          return setPacientes([...editPaciente])
+        }
+      })
+    }
+
     setPacientes([
       ...pacientes, 
       newPaciente
     ]);
+
 
     //! Reiniciar el formulario
     setNombre('')
