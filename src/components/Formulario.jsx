@@ -63,7 +63,7 @@ export default function Formulario (props) {
           {
             error &&
               <Error>
-                Todos los campos son
+                Todos los campos son obligatorios
               </Error>
           }
           <legend className="font-bold text-slate-700 dark:text-slate-200">
@@ -136,10 +136,8 @@ export default function Formulario (props) {
           </label>
             <button 
               type="submit"
-              className='absolute bottom-5 inset-x-0'>
-              <span className="before:block before:absolute mt-1 before:-inset-1 before:skew-y-1 decoration-white before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy relative inline-block">
-                <span className="relative italic text-white font-semibold text-lg ">Agregar Paciente</span>
-              </span> 
+              className='absolute w-44 mx-auto bottom-5 inset-x-0 before:block before:absolute mt-1 before:-inset-1 before:skew-y-1 decoration-white before:bg-indigo-600 hover:underline underline-offset-4 decoration-2 decoration-wavy inline-block'>
+              <span className="relative italic text-white font-semibold text-lg ">Agregar Paciente</span>
             </button>
         </fieldset>
       </form>

@@ -1,6 +1,6 @@
 import Paciente from "./Paciente";
 
-export default function ListadoPacientes({pacientes}) {
+export default function ListadoPacientes({pacientes, setPaciente}) {
 
   return (
     <div className="sm:w-1/2 lg:w-1/3 sm:h-[730px] overflow-y-auto border-2 border-dashed dark:border-slate-700 rounded-md">
@@ -12,12 +12,12 @@ export default function ListadoPacientes({pacientes}) {
               <span className="underline text-[#426AFC] dark:text-[#FFFB26] decoration-[#426AFC] dark:decoration-[#FFFB26] underline-offset-4 decoration-wavy decoration-2"> Pacientes y Citas</span>
             </legend>
             <article className="space-y-2 py-2">
-
               {
                 pacientes.map((paciente) => (
                   <Paciente
                     key={paciente.id}
                     paciente={paciente}
+                    setPaciente={setPaciente}
                 />)
               )}
             </article>
